@@ -1,0 +1,12 @@
+.listPosts {
+    width: 100%;
+    padding: 10px 0;
+    background-color: white;
+    .listPostsWrapper {
+        max-width: 1100px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+}

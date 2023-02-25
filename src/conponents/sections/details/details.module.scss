@@ -1,0 +1,64 @@
+@import '../../../styles/_media.scss';
+
+.detailsContainer {
+    background-color: #00000082;
+    width: 100%;
+    color: white;
+
+    .details {
+        height: 300px;
+        display: flex;
+        width: 1100px;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+
+        @include for-phone-only {
+            height: 150px;
+            gap: 10px;
+        }
+
+        .quote{
+            width: 1100px;
+            margin: auto;
+            font-size: 1.3rem;
+            text-align: center;
+            line-height: 1.8;
+            padding: 10px;
+
+            @include for-phone-only {
+                width: auto;
+                font-size: 12px;
+            }
+
+        }
+
+        .detailBox {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+
+            .detailVal {
+                font-size: 3.5rem;
+                font-weight: 600;
+
+                @include for-phone-only {
+                    font-size: 1.6rem;
+                }
+            }
+
+            .detailName {
+                font-size: 1.4rem;
+
+                @include for-phone-only {
+                    font-size: 0.6rem;
+                }
+            }
+
+ 
+        }
+    }
+}
