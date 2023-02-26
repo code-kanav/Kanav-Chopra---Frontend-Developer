@@ -21,6 +21,9 @@
 
         .search{
             cursor: pointer;
+            @include for-phone-only {
+                display: none;
+            }
         }
       
         .brand {

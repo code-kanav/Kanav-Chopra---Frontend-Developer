@@ -1,7 +1,6 @@
 import logo from "../../logo.png";
 import { Helmet } from "react-helmet";
 export default function SEOHead() {
-  // let logo='';
   let url = "kanav-frontend-developer";
   let title = "SpaceX Landing Page";
   let schemaData = {

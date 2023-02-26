@@ -89,7 +89,7 @@ export default function Header() {
             )}
           </span>
           <span>
-            <FaSearch size={20} />
+          <Search size={20} />
           </span>
           {open && (
             <div className={styles.mobileNav}>
