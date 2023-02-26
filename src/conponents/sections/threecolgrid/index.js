@@ -5,7 +5,7 @@ import styles from "./threeColGrid.module.scss";
 import { useState } from "react";
 export default function ThreeColGrid({ data }) {
   return (
-    <div className={styles.threecolGrid}>
+    <div id="new" className={styles.threecolGrid}>
       <div className={styles.gridTitle}>
         <h3 className="container">
              What's New?

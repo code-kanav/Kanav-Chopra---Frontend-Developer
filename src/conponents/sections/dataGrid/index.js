@@ -3,6 +3,8 @@ import { DataGrid } from "@mui/x-data-grid";
 import styles from "./dataGrid.module.scss";
 import { FaGripVertical } from "react-icons/fa";
 import { FaRegWindowClose } from "react-icons/fa";
+import Popup from "../../cards/popup";
+
 export default function DayaTable({ data }) {
   const [show, setShow] = React.useState(false);
   const [popupData, setPopupData] = React.useState("");
@@ -21,26 +23,31 @@ export default function DayaTable({ data }) {
   }, [show]);
 
   const columns = [
-    { field: "id", headerName: "ID", width: 70 },
+    { field: "id", headerName: "ID", width: 90 },
     {
       field: "rocket_name",
       headerName: "Rocket name",
-      width: 150,
+      width: 170,
     },
     {
       field: "first_flight",
       headerName: "First flight",
-      width: 150,
+      width: 170,
     },
     {
       field: "active",
       headerName: "Active",
-      width: 110,
+      width: 150,
     },
     {
       field: "success_rate_pct",
       headerName: "Success Rate (%)",
       width: 150,
+    },
+    {
+      field: "stages",
+      headerName: "Stages",
+      width: 90,
     },
     {
       field: "cost_per_launch",
@@ -53,7 +60,7 @@ export default function DayaTable({ data }) {
     {
       field: "Know More",
       headerName: "Know More",
-      width: 100,
+      width: 110,
       renderCell: (row) => {
         return (
           <div
@@ -72,7 +79,7 @@ export default function DayaTable({ data }) {
   const rows = data;
   return (
     <>
-      <div className={styles.box}>
+      <div id="details" className={styles.box}>
         <div className={styles.dataBox}>
           <h3>All you need to know about SpaceX Rockets</h3>
           <DataGrid
@@ -88,7 +95,8 @@ export default function DayaTable({ data }) {
       </div>
       {show ? (
         <div className="popup-overlay">
-          {JSON.stringify(popupData.description)}
+          {/* {JSON.stringify(popupData.description)} */}
+          <Popup data={popupData}/>
           <span className="popup-close">
           <FaRegWindowClose onClick={() => setShow(false)} />
           </span>

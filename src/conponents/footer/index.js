@@ -8,7 +8,7 @@ export default function Footer() {
         <div className={styles.newsLetterBox}>
           <div className={styles.newLetter}>
             <div className={styles.details}>
-              <p>Ready to get started? </p>
+              <p>Want to know more ?</p>
               <p>Talk to us today!</p>
             </div>
             <div className={styles.actions}>
@@ -44,7 +44,7 @@ export default function Footer() {
             Your Website Name. All Rights Reserved
           </span>
           <span className={styles.copyRightText}>
-            Made ❤️ by Kanav Chopra.
+            Made with ❤️ by Kanav Chopra.
           </span>
         </div>
       </div>

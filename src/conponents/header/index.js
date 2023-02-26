@@ -13,20 +13,20 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const menu = [
     {
-      title: "kanav",
-      url: "Hungry",
+      title: "Featured",
+      url: "#featured",
     },
     {
-      title: "kanav1",
-      url: "Hungry",
+      title: "Popular",
+      url: "#popular",
     },
     {
-      title: "kanav2",
-      url: "Hungry",
+      title: "New",
+      url: "#new",
     },
     {
-      title: "kanav2",
-      url: "Hungry",
+      title: "Details",
+      url: "#details",
     }
   ];
   useEffect(() => {
@@ -89,7 +89,7 @@ export default function Header() {
           {open && (
             <div className={styles.mobileNav}>
               <div className={styles.mobileMenu}>
-                {menu.slice(1, 6).map((item, i) => {
+                {menu.map((item, i) => {
                   return (
                     <a key={i} href={item.url}>
                       <span className={styles.navLink}>{item.title}</span>

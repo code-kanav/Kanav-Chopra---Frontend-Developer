@@ -4,7 +4,7 @@ import styles from "./listPosts.module.scss";
 
 export default function ListPosts({data}) {
   return (
-    <div className={styles.listPosts}>
+    <div id="popular" className={styles.listPosts}>
       <h3 className="container">Popular of the Week!</h3>
       <div className={styles.listPostsWrapper}>
         {data.slice(2,6).map((res, i)=> {

@@ -1,14 +1,14 @@
 import React from 'react'
 import ListCard from '../../cards/listcard'
 import OverlayCard from "../../cards/overlay"
-import styles from './banner.module.scss'
+import styles from './featured.module.scss'
 
-export default function Banner({data}) {
+export default function Featured({data}) {
 
   return (
-    <div className={styles.banner}>
+    <div id="featured" className={styles.featured}>
       <div className={styles.featGrid}>
-      <h1 className={styles.bannerHeading}>Our Featured Rockets</h1>
+      <h1 className={styles.featuredHeading}>Our Featured Rockets</h1>
           <div className={styles.gridWrapper}>
               <div className={styles.left}>
                   <OverlayCard data={data}/>
