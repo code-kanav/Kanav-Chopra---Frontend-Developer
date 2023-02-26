@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./details.module.scss";
 import AnimatedNumber from "animated-number-react";
 export default function Details({ data, show }) {

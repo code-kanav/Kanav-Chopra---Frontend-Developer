@@ -54,8 +54,6 @@ export default function DayaTable({ data }) {
       headerName: "Cost per launch",
       type: "number",
       width: 160,
-      //   valueGetter: (params) =>
-      //     `${params.row.firstName || ''} ${params.row.lastName || ''}`,
     },
     {
       field: "Know More",
@@ -87,18 +85,15 @@ export default function DayaTable({ data }) {
             columns={columns}
             pageSize={5}
             rowsPerPageOptions={[5]}
-            // checkboxSelection
             disableSelectionOnClick
-            // experimentalFeatures={{ newEditingApi: true }}
           />
         </div>
       </div>
       {show ? (
         <div className="popup-overlay">
-          {/* {JSON.stringify(popupData.description)} */}
-          <Popup data={popupData}/>
+          <Popup data={popupData} />
           <span className="popup-close">
-          <FaRegWindowClose onClick={() => setShow(false)} />
+            <FaRegWindowClose onClick={() => setShow(false)} />
           </span>
         </div>
       ) : (

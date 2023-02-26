@@ -8,27 +8,24 @@ import HeroBanner from "./conponents/sections/heroBanner";
 import Featured from "./conponents/sections/featured";
 import ListPosts from "./conponents/sections/listposts";
 import ThreeColGrid from "./conponents/sections/threecolgrid";
-import Details from "./conponents/sections/details/details";
+import Details from "./conponents/sections/details";
 import DataTable from "./conponents/sections/dataGrid";
+import SEOHead from "./conponents/seohead";
 function App() {
   const [rockets, setRockets] = useState([]);
 
-  var requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-  };
-  
-  const fetchData = () => {
-    return axios.get("https://api.spacexdata.com/v3/rockets?pretty=true&limit=10", requestOptions)
-          .then((response) => setRockets(response.data));
-  }
-
   useEffect(() => {
-    fetchData();
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    axios.get("https://api.spacexdata.com/v3/rockets?pretty=true&limit=10", requestOptions)
+    .then((response) => setRockets(response.data));
   },[])
 
   return (
     <div className="App">
+      <SEOHead/>
       <Header/>
       <HeroBanner></HeroBanner>
       <Featured data={rockets} />

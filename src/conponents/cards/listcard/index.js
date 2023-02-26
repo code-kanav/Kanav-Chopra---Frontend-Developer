@@ -1,27 +1,26 @@
 import React from "react";
 import { formatDate } from "../../../lib/dateFormatter";
 import styles from "./listCard.module.scss";
-import { FaClock } from "react-icons/fa";
 export default function ListCard({ data }) {
-
   const featuredImage = data?.flickr_images[0];
   const postTitle = data?.rocket_name;
-  const description = data?.description
+  const description = data?.description;
   const launchDate = data?.first_flight;
-  // const authorSlug =  "/author/" + post.author.node.slug;
-  // const pubDate = post.modified;
-  // const category = post.categories.nodes[0].name;
-  // const slug = post.slug;
-  
 
   return (
     <div className={styles.listCard}>
-      <a href="/"><div className={styles.cardCategory}>{postTitle}</div></a>
+      <a href="/">
+        <div className={styles.cardCategory}>{postTitle}</div>
+      </a>
       <div className={styles.cardContent}>
-          <p className={styles.cardDescription} dangerouslySetInnerHTML={{ __html: description }}></p>
-          <div className={styles.cardDate}>
-              <p>First Flight:</p><span>{launchDate?formatDate(new Date(launchDate)):""}</span>
-          </div>
+        <p
+          className={styles.cardDescription}
+          dangerouslySetInnerHTML={{ __html: description }}
+        ></p>
+        <div className={styles.cardDate}>
+          <p>First Flight:</p>
+          <span>{launchDate ? formatDate(new Date(launchDate)) : ""}</span>
+        </div>
       </div>
       <div className={styles.cardThumb}>
         <img width={120} height={120} src={featuredImage} alt="post title" />
