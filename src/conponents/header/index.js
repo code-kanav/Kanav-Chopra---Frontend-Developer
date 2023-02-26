@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "../header/header.module.scss";
+import Search from "../search";
 import {
   FaFacebook,
   FaTwitter,
@@ -27,7 +28,7 @@ export default function Header() {
     {
       title: "Details",
       url: "#details",
-    }
+    },
   ];
   useEffect(() => {
     document.body.classList.toggle("mobileNav-Open", open);
@@ -35,6 +36,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
+      
       <div className={styles.headerWrapper}>
         <div className={styles.brand}>
           <a href="/">
@@ -52,6 +54,9 @@ export default function Header() {
             })}
           </div>
         </div>
+        <div className={styles.search}>
+              <Search />
+            </div>
         <div className={styles.socials}>
           <div className={styles.socialHandles}>
             <span className={styles.socialLink}>

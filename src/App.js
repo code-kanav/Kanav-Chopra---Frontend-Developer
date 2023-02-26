@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <SEOHead/>
-      <Header/>
+      <Header data={rockets}/>
       <HeroBanner></HeroBanner>
       <Featured data={rockets} />
       <ListPosts data={rockets} />

@@ -18,6 +18,10 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap:wrap;
+
+        .search{
+            cursor: pointer;
+        }
       
         .brand {
             max-width: 400px;
